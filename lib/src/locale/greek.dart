@@ -1,4 +1,4 @@
-part of duration.locale;
+import '../../locale.dart';
 
 class GreekDurationLocale extends DurationLocale {
   const GreekDurationLocale();
@@ -8,7 +8,7 @@ class GreekDurationLocale extends DurationLocale {
     if (abbreviated) {
       return 'χ';
     } else {
-      return 'χρόν' + (amount.abs() != 1 ? 'ια' : 'ος');
+      return 'χρόν${amount.abs() != 1 ? 'ια' : 'ος'}';
     }
   }
 
@@ -17,7 +17,7 @@ class GreekDurationLocale extends DurationLocale {
     if (abbreviated) {
       return 'μην';
     } else {
-      return 'μήν' + (amount.abs() != 1 ? 'ες' : 'ας');
+      return 'μήν${amount.abs() != 1 ? 'ες' : 'ας'}';
     }
   }
 
@@ -26,7 +26,7 @@ class GreekDurationLocale extends DurationLocale {
     if (abbreviated) {
       return 'ε';
     } else {
-      return 'εβδομάδ' + (amount.abs() != 1 ? 'ες' : 'α');
+      return 'εβδομάδ${amount.abs() != 1 ? 'ες' : 'α'}';
     }
   }
 
@@ -35,7 +35,7 @@ class GreekDurationLocale extends DurationLocale {
     if (abbreviated) {
       return 'μ';
     } else {
-      return 'μέρ' + (amount.abs() != 1 ? 'ες' : 'α');
+      return 'μέρ${amount.abs() != 1 ? 'ες' : 'α'}';
     }
   }
 
@@ -44,7 +44,7 @@ class GreekDurationLocale extends DurationLocale {
     if (abbreviated) {
       return 'ω';
     } else {
-      return 'ώρ' + (amount.abs() != 1 ? 'ες' : 'α');
+      return 'ώρ${amount.abs() != 1 ? 'ες' : 'α'}';
     }
   }
 
@@ -53,7 +53,7 @@ class GreekDurationLocale extends DurationLocale {
     if (abbreviated) {
       return 'λεπ';
     } else {
-      return 'λεπτ' + (amount.abs() != 1 ? 'ά' : 'ό');
+      return 'λεπτ${amount.abs() != 1 ? 'ά' : 'ό'}';
     }
   }
 
@@ -62,7 +62,7 @@ class GreekDurationLocale extends DurationLocale {
     if (abbreviated) {
       return 'δ';
     } else {
-      return 'δευτερόλεπτ' + (amount.abs() != 1 ? 'α' : 'ο');
+      return 'δευτερόλεπτ${amount.abs() != 1 ? 'α' : 'ο'}';
     }
   }
 
@@ -71,7 +71,7 @@ class GreekDurationLocale extends DurationLocale {
     if (abbreviated) {
       return 'χ';
     } else {
-      return 'χιλιοστ' + (amount.abs() != 1 ? 'ά' : 'ό');
+      return 'χιλιοστ${amount.abs() != 1 ? 'ά' : 'ό'}';
     }
   }
 
@@ -80,7 +80,7 @@ class GreekDurationLocale extends DurationLocale {
     if (abbreviated) {
       return 'μ';
     } else {
-      return 'μικροδευτερόλεπτ' + (amount.abs() != 1 ? 'α' : 'ο');
+      return 'μικροδευτερόλεπτ${amount.abs() != 1 ? 'α' : 'ο'}';
     }
   }
 }

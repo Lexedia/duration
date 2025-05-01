@@ -1,4 +1,4 @@
-part of duration.locale;
+import '../../locale.dart';
 
 enum CzechDurationLocalePluralization {
   one,
@@ -31,7 +31,6 @@ class CzechDurationLocale extends DurationLocale {
       case CzechDurationLocalePluralization.few:
         return 'roky';
       case CzechDurationLocalePluralization.many:
-      default:
         return 'let';
     }
   }
@@ -48,7 +47,6 @@ class CzechDurationLocale extends DurationLocale {
       case CzechDurationLocalePluralization.few:
         return 'měsíce';
       case CzechDurationLocalePluralization.many:
-      default:
         return 'měsíců';
     }
   }
@@ -65,7 +63,6 @@ class CzechDurationLocale extends DurationLocale {
       case CzechDurationLocalePluralization.few:
         return 'týdny';
       case CzechDurationLocalePluralization.many:
-      default:
         return 'týdnů';
     }
   }
@@ -82,7 +79,6 @@ class CzechDurationLocale extends DurationLocale {
       case CzechDurationLocalePluralization.few:
         return 'dny';
       case CzechDurationLocalePluralization.many:
-      default:
         return 'dnů';
     }
   }
@@ -99,7 +95,6 @@ class CzechDurationLocale extends DurationLocale {
       case CzechDurationLocalePluralization.few:
         return 'hodiny';
       case CzechDurationLocalePluralization.many:
-      default:
         return 'hodin';
     }
   }
@@ -116,7 +111,6 @@ class CzechDurationLocale extends DurationLocale {
       case CzechDurationLocalePluralization.few:
         return 'minuty';
       case CzechDurationLocalePluralization.many:
-      default:
         return 'minut';
     }
   }
@@ -133,7 +127,6 @@ class CzechDurationLocale extends DurationLocale {
       case CzechDurationLocalePluralization.few:
         return 'sekundy';
       case CzechDurationLocalePluralization.many:
-      default:
         return 'sekund';
     }
   }
@@ -150,7 +143,6 @@ class CzechDurationLocale extends DurationLocale {
       case CzechDurationLocalePluralization.few:
         return 'milisekundy';
       case CzechDurationLocalePluralization.many:
-      default:
         return 'milisekund';
     }
   }

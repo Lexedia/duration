@@ -1,4 +1,4 @@
-part of duration.locale;
+import '../../locale.dart';
 
 class HebrewDurationLocale extends DurationLocale {
   const HebrewDurationLocale();

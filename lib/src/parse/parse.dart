@@ -138,12 +138,13 @@ Duration parseTime(String input) {
   // TODO verify that there are no negative parts
 
   var ret = Duration(
-      days: days,
-      hours: hours,
-      minutes: minutes,
-      seconds: seconds,
-      milliseconds: milliseconds,
-      microseconds: microseconds);
+    days: days,
+    hours: hours,
+    minutes: minutes,
+    seconds: seconds,
+    milliseconds: milliseconds,
+    microseconds: microseconds,
+  );
 
   return isNegative ? -ret : ret;
 }

@@ -1,4 +1,4 @@
-part of duration.locale;
+import '../../locale.dart';
 
 class PolishDurationLocale extends DurationLocale {
   const PolishDurationLocale();
@@ -12,7 +12,9 @@ class PolishDurationLocale extends DurationLocale {
     final int lastTwoDigits = amount % 100;
     if (lastDigit >= 2 &&
         lastDigit <= 4 &&
-        !(lastTwoDigits >= 12 && lastTwoDigits <= 14)) return few;
+        !(lastTwoDigits >= 12 && lastTwoDigits <= 14)) {
+      return few;
+    }
 
     return many;
   }

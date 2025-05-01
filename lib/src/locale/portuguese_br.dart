@@ -1,4 +1,4 @@
-part of duration.locale;
+import '../../locale.dart';
 
 class PortugueseBRDurationLanguage extends DurationLocale {
   const PortugueseBRDurationLanguage();
