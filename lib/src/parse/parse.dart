@@ -29,6 +29,9 @@ int _calculateDaysFromYearsAndMonths(int years, int months) {
 
 /// Parses duration string formatted by [prettyDuration] into [Duration] (in abbreviated mode).
 /// [separator] defines the string that splits duration components in the string.
+/// 
+/// In case the units are duplicated, the last one is kept as a reference. The other ones are discarded.
+/// So `1d 6d 7h` will result in `Duration(days: 6, hours: 7)`
 ///
 /// Example:
 /// ```dart
