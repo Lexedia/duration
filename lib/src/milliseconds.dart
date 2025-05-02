@@ -1,3 +1,4 @@
+import 'locale/english.dart';
 import 'locale/locale.dart';
 
 /// Pretty format [duration] in terms of milliseconds.

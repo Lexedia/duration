@@ -1,4 +1,4 @@
-part of duration.locale;
+import '../../locale.dart';
 
 class GermanDurationLocale extends DurationLocale {
   const GermanDurationLocale();
@@ -13,6 +13,9 @@ class GermanDurationLocale extends DurationLocale {
   }
 
   @override
+  RegExp get yearPattern => RegExp(r'J(?:ahre?)?');
+
+  @override
   String month(int amount, [bool abbreviated = true]) {
     if (abbreviated) {
       return 'M';
@@ -20,6 +23,9 @@ class GermanDurationLocale extends DurationLocale {
       return 'Monat${amount > 1 ? 'e' : ''}';
     }
   }
+
+  @override
+  RegExp get monthPattern => RegExp(r'M(?:onate?)?');
 
   @override
   String week(int amount, [bool abbreviated = true]) {
@@ -31,6 +37,9 @@ class GermanDurationLocale extends DurationLocale {
   }
 
   @override
+  RegExp get weekPattern => RegExp(r'W(?:ochen?)?');
+
+  @override
   String day(int amount, [bool abbreviated = true]) {
     if (abbreviated) {
       return 'T';
@@ -38,6 +47,9 @@ class GermanDurationLocale extends DurationLocale {
       return 'Tag${amount > 1 ? 'e' : ''}';
     }
   }
+
+  @override
+  RegExp get dayPattern => RegExp(r'T(?:age?)?');
 
   @override
   String hour(int amount, [bool abbreviated = true]) {
@@ -49,6 +61,9 @@ class GermanDurationLocale extends DurationLocale {
   }
 
   @override
+  RegExp get hourPattern => RegExp(r'Std\.?|S(?:tunden?)?');
+
+  @override
   String minute(int amount, [bool abbreviated = true]) {
     if (abbreviated) {
       return 'Min';
@@ -56,6 +71,9 @@ class GermanDurationLocale extends DurationLocale {
       return 'Minute${amount > 1 ? 'n' : ''}';
     }
   }
+
+  @override
+  RegExp get minutePattern => RegExp(r'M(?:inuten?)?');
 
   @override
   String second(int amount, [bool abbreviated = true]) {
@@ -67,6 +85,9 @@ class GermanDurationLocale extends DurationLocale {
   }
 
   @override
+  RegExp get secondPattern => RegExp(r'S(?:ekunden?)?');
+
+  @override
   String millisecond(int amount, [bool abbreviated = true]) {
     if (abbreviated) {
       return 'Ms';
@@ -76,6 +97,9 @@ class GermanDurationLocale extends DurationLocale {
   }
 
   @override
+  RegExp get millisecondPattern => RegExp(r'Ms|M(?:illisekunden?)?');
+
+  @override
   String microseconds(int amount, [bool abbreviated = true]) {
     if (abbreviated) {
       return 'Us';
@@ -83,4 +107,7 @@ class GermanDurationLocale extends DurationLocale {
       return 'Mikrosekunde${amount > 1 ? 'n' : ''}';
     }
   }
+
+  @override
+  RegExp get microsecondPattern => RegExp(r'Us|M(?:ikrosekunden?)?');
 }

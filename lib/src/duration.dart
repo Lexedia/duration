@@ -1,3 +1,4 @@
+import 'locale/english.dart';
 import 'locale/locale.dart';
 import 'tersity.dart';
 

@@ -1,4 +1,4 @@
-part of duration.locale;
+import '../../locale.dart';
 
 class IndonesianDurationLocale extends DurationLocale {
   const IndonesianDurationLocale();
@@ -83,4 +83,31 @@ class IndonesianDurationLocale extends DurationLocale {
       return 'mikrodetik${amount > 1 ? 's' : ''}'; //no pluralization
     }
   }
+
+  @override
+  RegExp get dayPattern => RegExp(r'hr|hari');
+
+  @override
+  RegExp get hourPattern => RegExp(r'j(?:am)?');
+
+  @override
+  RegExp get microsecondPattern => RegExp(r'mikrodetik');
+
+  @override
+  RegExp get millisecondPattern => RegExp(r'milidetik');
+
+  @override
+  RegExp get minutePattern => RegExp(r'm(?:enit)?');
+
+  @override
+  RegExp get monthPattern => RegExp(r'bln|bulan');
+
+  @override
+  RegExp get secondPattern => RegExp(r'd(?:etik)?');
+
+  @override
+  RegExp get weekPattern => RegExp(r'mgg|minggu');
+
+  @override
+  RegExp get yearPattern => RegExp(r'thn|tahun');
 }

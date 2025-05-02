@@ -1,37 +1,64 @@
 library duration.locale;
 
-import 'package:duration/duration.dart';
+import '../../hourglass.dart';
 
-part 'english.dart';
-part 'french.dart';
-part 'greek.dart';
-part 'hebrew.dart';
-part 'polish.dart';
-part 'portuguese_br.dart';
-part 'russian.dart';
-part 'spanish.dart';
-part 'swedish.dart';
-part 'norwegian.dart';
-part 'turkish.dart';
-part 'italian.dart';
-part 'german.dart';
-part 'dutch.dart';
-part 'chinese_hans.dart';
-part 'chinese_hant.dart';
-part 'thai.dart';
-part 'romanian.dart';
-part 'arabic.dart';
-part 'korean.dart';
-part 'indonesian.dart';
-part 'czech.dart';
-part 'finnish.dart';
-part 'japanese.dart';
-part 'ukrainian.dart';
-part 'vietnamese.dart';
+import 'english.dart';
+import 'french.dart';
+import 'greek.dart';
+import 'hebrew.dart';
+import 'polish.dart';
+import 'portuguese_br.dart';
+import 'russian.dart';
+import 'spanish.dart';
+import 'swedish.dart';
+import 'norwegian.dart';
+import 'turkish.dart';
+import 'italian.dart';
+import 'german.dart';
+import 'dutch.dart';
+import 'chinese_hans.dart';
+import 'chinese_hant.dart';
+import 'thai.dart';
+import 'romanian.dart';
+import 'arabic.dart';
+import 'korean.dart';
+import 'indonesian.dart';
+import 'czech.dart';
+import 'finnish.dart';
+import 'japanese.dart';
+import 'ukrainian.dart';
+import 'vietnamese.dart';
 
 /// Interface to print time units for different locale
 abstract class DurationLocale {
   const DurationLocale();
+
+  /// A pattern to match years for this locale.
+  RegExp get yearPattern;
+
+  /// A pattern to match months for this locale.
+  RegExp get monthPattern;
+
+  /// A pattern to match weeks for this locale.
+  RegExp get weekPattern;
+
+  /// A pattern to match days for this locale.
+  RegExp get dayPattern;
+
+  /// A pattern to match hours for this locale.
+  RegExp get hourPattern;
+
+  /// A pattern to match minutes for this locale.
+  RegExp get minutePattern;
+
+  /// A pattern to match seconds for this locale.
+  RegExp get secondPattern;
+
+  /// A pattern to match milliseconds for this locale.
+  RegExp get millisecondPattern;
+
+  /// A pattern to match microseconds for this locale.
+  RegExp get microsecondPattern;
 
   String get defaultSpacer => ' ';
 
@@ -87,8 +114,6 @@ abstract class DurationLocale {
         return millisecond(amount, abbreviated);
       case DurationTersity.microsecond:
         return microseconds(amount, abbreviated);
-      default:
-        throw UnsupportedError('unsupported duration unit: $unit');
     }
   }
 

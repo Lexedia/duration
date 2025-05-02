@@ -1,4 +1,4 @@
-part of duration.locale;
+import '../../locale.dart';
 
 class RussianDurationLanguage extends DurationLocale {
   const RussianDurationLanguage();
@@ -8,7 +8,9 @@ class RussianDurationLanguage extends DurationLocale {
     if (lastDigit == 0 ||
         (amount >= 11 && amount <= 14) ||
         amount == 111 ||
-        amount == 913) return third;
+        amount == 913) {
+      return third;
+    }
     if (lastDigit == 1) return first;
     if (lastDigit <= 4) return second;
     return third;
@@ -94,4 +96,40 @@ class RussianDurationLanguage extends DurationLocale {
       return _russianStr(amount, 'микросекунда', 'микросекунды', 'микросекунд');
     }
   }
+  
+  @override
+  // TODO: implement dayPattern
+  RegExp get dayPattern => throw UnimplementedError();
+  
+  @override
+  // TODO: implement hourPattern
+  RegExp get hourPattern => throw UnimplementedError();
+  
+  @override
+  // TODO: implement microsecondPattern
+  RegExp get microsecondPattern => throw UnimplementedError();
+  
+  @override
+  // TODO: implement millisecondPattern
+  RegExp get millisecondPattern => throw UnimplementedError();
+  
+  @override
+  // TODO: implement minutePattern
+  RegExp get minutePattern => throw UnimplementedError();
+  
+  @override
+  // TODO: implement monthPattern
+  RegExp get monthPattern => throw UnimplementedError();
+  
+  @override
+  // TODO: implement secondPattern
+  RegExp get secondPattern => throw UnimplementedError();
+  
+  @override
+  // TODO: implement weekPattern
+  RegExp get weekPattern => throw UnimplementedError();
+  
+  @override
+  // TODO: implement yearPattern
+  RegExp get yearPattern => throw UnimplementedError();
 }

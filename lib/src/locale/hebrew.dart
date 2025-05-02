@@ -1,4 +1,4 @@
-part of duration.locale;
+import '../../locale.dart';
 
 class HebrewDurationLocale extends DurationLocale {
   const HebrewDurationLocale();
@@ -83,4 +83,31 @@ class HebrewDurationLocale extends DurationLocale {
       return amount == 1 ? 'שנה' : 'שנים';
     }
   }
+
+  @override
+  RegExp get dayPattern => RegExp(r'(י|יום|ימים)');
+
+  @override
+  RegExp get hourPattern => RegExp(r'(ש|שעה|שעות)');
+
+  @override
+  RegExp get microsecondPattern => RegExp(r'(µs|מיקרו שניה|מיקרו שניות)');
+
+  @override
+  RegExp get millisecondPattern => RegExp(r'(ms|מילי שניה|מילי שניות)');
+
+  @override
+  RegExp get minutePattern => RegExp(r'(דק\.|דקה|דקות)');
+
+  @override
+  RegExp get monthPattern => RegExp(r'(ח|חודש|חודשיים)');
+
+  @override
+  RegExp get secondPattern => RegExp(r'(שנ\.|שניה|שניות)');
+
+  @override
+  RegExp get weekPattern => RegExp(r'(שב\.|שבוע|שבועות)');
+
+  @override
+  RegExp get yearPattern => RegExp(r'(שנ\.|שנה|שנים)');
 }

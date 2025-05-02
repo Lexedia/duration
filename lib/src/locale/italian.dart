@@ -1,4 +1,4 @@
-part of duration.locale;
+import '../../locale.dart';
 
 class ItalianDurationLocale extends DurationLocale {
   const ItalianDurationLocale();
@@ -83,4 +83,31 @@ class ItalianDurationLocale extends DurationLocale {
       return 'microsecond${(amount == 0 || amount > 1) ? 'i' : 'o'}';
     }
   }
+
+  @override
+  RegExp get dayPattern => RegExp(r'g(?:iorn(?:i|o))?');
+
+  @override
+  RegExp get hourPattern => RegExp(r'h(?:or(?:e|a))?');
+
+  @override
+  RegExp get microsecondPattern => RegExp(r'μs|microsecond(?:i|o)');
+
+  @override
+  RegExp get millisecondPattern => RegExp(r'ms|millisecond(?:i|o)');
+
+  @override
+  RegExp get minutePattern => RegExp(r'm(?:inut(?:i|o))?');
+
+  @override
+  RegExp get monthPattern => RegExp(r'm(?:es(?:i|e))?');
+
+  @override
+  RegExp get secondPattern => RegExp(r's(?:econd(?:i|o))?');
+
+  @override
+  RegExp get weekPattern => RegExp(r'set(?:timan(?:e|a))?');
+
+  @override
+  RegExp get yearPattern => RegExp(r'a(?:nn(?:i|o))?');
 }

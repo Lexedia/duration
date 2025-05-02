@@ -1,4 +1,4 @@
-part of duration.locale;
+import '../../locale.dart';
 
 enum CzechDurationLocalePluralization {
   one,
@@ -31,10 +31,12 @@ class CzechDurationLocale extends DurationLocale {
       case CzechDurationLocalePluralization.few:
         return 'roky';
       case CzechDurationLocalePluralization.many:
-      default:
         return 'let';
     }
   }
+
+  @override
+  RegExp get yearPattern => RegExp(r'r(?:ocky?)?|let');
 
   @override
   String month(int amount, [bool abbreviated = true]) {
@@ -48,10 +50,12 @@ class CzechDurationLocale extends DurationLocale {
       case CzechDurationLocalePluralization.few:
         return 'měsíce';
       case CzechDurationLocalePluralization.many:
-      default:
         return 'měsíců';
     }
   }
+
+  @override
+  RegExp get monthPattern => RegExp(r'měs(?:\.?|íce?|íců)?');
 
   @override
   String week(int amount, [bool abbreviated = true]) {
@@ -65,10 +69,12 @@ class CzechDurationLocale extends DurationLocale {
       case CzechDurationLocalePluralization.few:
         return 'týdny';
       case CzechDurationLocalePluralization.many:
-      default:
         return 'týdnů';
     }
   }
+
+  @override
+  RegExp get weekPattern => RegExp(r't(?:ýd(?:en|ny|nů)?)?');
 
   @override
   String day(int amount, [bool abbreviated = true]) {
@@ -82,10 +88,12 @@ class CzechDurationLocale extends DurationLocale {
       case CzechDurationLocalePluralization.few:
         return 'dny';
       case CzechDurationLocalePluralization.many:
-      default:
         return 'dnů';
     }
   }
+
+  @override
+  RegExp get dayPattern => RegExp(r'd|den|dny|dnů');
 
   @override
   String hour(int amount, [bool abbreviated = true]) {
@@ -99,10 +107,12 @@ class CzechDurationLocale extends DurationLocale {
       case CzechDurationLocalePluralization.few:
         return 'hodiny';
       case CzechDurationLocalePluralization.many:
-      default:
         return 'hodin';
     }
   }
+
+  @override
+  RegExp get hourPattern => RegExp(r'h(?:odin(?:a|y)?)?');
 
   @override
   String minute(int amount, [bool abbreviated = true]) {
@@ -116,10 +126,12 @@ class CzechDurationLocale extends DurationLocale {
       case CzechDurationLocalePluralization.few:
         return 'minuty';
       case CzechDurationLocalePluralization.many:
-      default:
         return 'minut';
     }
   }
+
+  @override
+  RegExp get minutePattern => RegExp(r'm(?:inut(?:a|y)?)?');
 
   @override
   String second(int amount, [bool abbreviated = true]) {
@@ -133,10 +145,12 @@ class CzechDurationLocale extends DurationLocale {
       case CzechDurationLocalePluralization.few:
         return 'sekundy';
       case CzechDurationLocalePluralization.many:
-      default:
         return 'sekund';
     }
   }
+
+  @override
+  RegExp get secondPattern => RegExp(r's(?:ekund(?:a|y)?)?');
 
   @override
   String millisecond(int amount, [bool abbreviated = true]) {
@@ -150,10 +164,13 @@ class CzechDurationLocale extends DurationLocale {
       case CzechDurationLocalePluralization.few:
         return 'milisekundy';
       case CzechDurationLocalePluralization.many:
-      default:
         return 'milisekund';
     }
   }
+
+  @override
+  RegExp get millisecondPattern =>
+      RegExp(r'ms|milisekund(?:a|y)?');
 
   @override
   String microseconds(int amount, [bool abbreviated = true]) {
@@ -170,4 +187,8 @@ class CzechDurationLocale extends DurationLocale {
         return 'mikrosekund';
     }
   }
+
+  @override
+  RegExp get microsecondPattern =>
+      RegExp(r'μs|mikrosekund(?:a|y)?');
 }

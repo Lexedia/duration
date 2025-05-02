@@ -1,4 +1,4 @@
-import 'package:duration/duration.dart';
+import 'package:hourglass/hourglass.dart';
 import 'package:test/test.dart';
 
 void main() {
