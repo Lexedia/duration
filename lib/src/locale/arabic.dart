@@ -17,10 +17,12 @@ class ArabicDurationLocale extends DurationLocale {
       } else if (amount > 10) {
         return 'عام';
       }
-
       return 'أعوام';
     }
   }
+
+  @override
+  RegExp get yearPattern => RegExp(r'ع|عام|عامين|أعوام');
 
   @override
   String month(int amount, [bool abbreviated = true]) {
@@ -41,6 +43,9 @@ class ArabicDurationLocale extends DurationLocale {
   }
 
   @override
+  RegExp get monthPattern => RegExp(r'ش|شهر|شهرين|أشهر|شهور');
+
+  @override
   String week(int amount, [bool abbreviated = true]) {
     if (abbreviated) {
       return 'أ';
@@ -57,6 +62,9 @@ class ArabicDurationLocale extends DurationLocale {
       return 'اسابيع';
     }
   }
+
+  @override
+  RegExp get weekPattern => RegExp(r'أ|أسبوع|اسبوعين|اسابيع');
 
   @override
   String day(int amount, [bool abbreviated = true]) {
@@ -77,6 +85,9 @@ class ArabicDurationLocale extends DurationLocale {
   }
 
   @override
+  RegExp get dayPattern => RegExp(r'ي|يوم|يومين|ايام');
+
+  @override
   String hour(int amount, [bool abbreviated = true]) {
     if (abbreviated) {
       return 'س';
@@ -93,6 +104,9 @@ class ArabicDurationLocale extends DurationLocale {
       return 'ساعات';
     }
   }
+
+  @override
+  RegExp get hourPattern => RegExp(r'س|ساعة|ساعتين|ساعات');
 
   @override
   String minute(int amount, [bool abbreviated = true]) {
@@ -113,6 +127,9 @@ class ArabicDurationLocale extends DurationLocale {
   }
 
   @override
+  RegExp get minutePattern => RegExp(r'د|دقيقة|دقيقتين|دقائق');
+
+  @override
   String second(int amount, [bool abbreviated = true]) {
     if (abbreviated) {
       return 'ث';
@@ -122,13 +139,16 @@ class ArabicDurationLocale extends DurationLocale {
       } else if (amount == 2) {
         return 'ثانيتين';
       } else if (amount > 2 && amount < 11) {
-        return 'ثواني';
+        return 'ثوان';
       } else if (amount > 10) {
         return 'ثانية';
       }
       return 'ثواني';
     }
   }
+
+  @override
+  RegExp get secondPattern => RegExp(r'ث|ثانية|ثانيتين|ثواني');
 
   @override
   String millisecond(int amount, [bool abbreviated = true]) {
@@ -149,6 +169,10 @@ class ArabicDurationLocale extends DurationLocale {
   }
 
   @override
+  RegExp get millisecondPattern =>
+      RegExp(r'م ث|ملّي ثانية|ملّي ثانيتين|ملّي ثواني');
+
+  @override
   String microseconds(int amount, [bool abbreviated = true]) {
     if (abbreviated) {
       return 'ميكرو ث';
@@ -165,4 +189,8 @@ class ArabicDurationLocale extends DurationLocale {
       return 'ميكرو ثواني';
     }
   }
+
+  @override
+  RegExp get microsecondPattern =>
+      RegExp(r'ميكرو ث|ميكرو ثانية|ميكرو ثانيتيتن|ميكرو ثواني');
 }

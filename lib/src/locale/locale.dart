@@ -33,6 +33,33 @@ import 'vietnamese.dart';
 abstract class DurationLocale {
   const DurationLocale();
 
+  /// A pattern to match years for this locale.
+  RegExp get yearPattern;
+
+  /// A pattern to match months for this locale.
+  RegExp get monthPattern;
+
+  /// A pattern to match weeks for this locale.
+  RegExp get weekPattern;
+
+  /// A pattern to match days for this locale.
+  RegExp get dayPattern;
+
+  /// A pattern to match hours for this locale.
+  RegExp get hourPattern;
+
+  /// A pattern to match minutes for this locale.
+  RegExp get minutePattern;
+
+  /// A pattern to match seconds for this locale.
+  RegExp get secondPattern;
+
+  /// A pattern to match milliseconds for this locale.
+  RegExp get millisecondPattern;
+
+  /// A pattern to match microseconds for this locale.
+  RegExp get microsecondPattern;
+
   String get defaultSpacer => ' ';
 
   /// Print [amount] years for the corresponding locale. The unit is abbreviated

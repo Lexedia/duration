@@ -99,4 +99,40 @@ class PolishDurationLocale extends DurationLocale {
       return _polishStr(amount, 'mikrosekunda', 'mikrosekundy', 'mikrosekund');
     }
   }
+  
+  @override
+  // TODO: implement dayPattern
+  RegExp get dayPattern => throw UnimplementedError();
+  
+  @override
+  // TODO: implement hourPattern
+  RegExp get hourPattern => throw UnimplementedError();
+  
+  @override
+  // TODO: implement microsecondPattern
+  RegExp get microsecondPattern => throw UnimplementedError();
+  
+  @override
+  // TODO: implement millisecondPattern
+  RegExp get millisecondPattern => throw UnimplementedError();
+  
+  @override
+  // TODO: implement minutePattern
+  RegExp get minutePattern => throw UnimplementedError();
+  
+  @override
+  // TODO: implement monthPattern
+  RegExp get monthPattern => throw UnimplementedError();
+  
+  @override
+  // TODO: implement secondPattern
+  RegExp get secondPattern => throw UnimplementedError();
+  
+  @override
+  // TODO: implement weekPattern
+  RegExp get weekPattern => throw UnimplementedError();
+  
+  @override
+  // TODO: implement yearPattern
+  RegExp get yearPattern => throw UnimplementedError();
 }

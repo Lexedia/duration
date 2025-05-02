@@ -13,6 +13,9 @@ class FinnishDurationLocale extends DurationLocale {
   }
 
   @override
+  RegExp get yearPattern => RegExp(r'v(?:uosia?)?');
+
+  @override
   String month(int amount, [bool abbreviated = true]) {
     if (abbreviated) {
       return 'kk';
@@ -20,6 +23,9 @@ class FinnishDurationLocale extends DurationLocale {
       return 'kuukausi${amount.abs() != 1 ? 'a' : ''}';
     }
   }
+
+  @override
+  RegExp get monthPattern => RegExp(r'kk(?:uukausia?)?');
 
   @override
   String week(int amount, [bool abbreviated = true]) {
@@ -31,6 +37,9 @@ class FinnishDurationLocale extends DurationLocale {
   }
 
   @override
+  RegExp get weekPattern => RegExp(r'vko(?:viikkoa?)?');
+
+  @override
   String day(int amount, [bool abbreviated = true]) {
     if (abbreviated) {
       return 'pvä';
@@ -38,6 +47,9 @@ class FinnishDurationLocale extends DurationLocale {
       return 'päivä${amount.abs() != 1 ? 'ä' : ''}';
     }
   }
+
+  @override
+  RegExp get dayPattern => RegExp(r'pvä(?:päivää?)?');
 
   @override
   String hour(int amount, [bool abbreviated = true]) {
@@ -49,6 +61,9 @@ class FinnishDurationLocale extends DurationLocale {
   }
 
   @override
+  RegExp get hourPattern => RegExp(r't(?:untia?)?');
+
+  @override
   String minute(int amount, [bool abbreviated = true]) {
     if (abbreviated) {
       return 'min';
@@ -56,6 +71,9 @@ class FinnishDurationLocale extends DurationLocale {
       return 'minuutti${amount.abs() != 1 ? 'a' : ''}';
     }
   }
+
+  @override
+  RegExp get minutePattern => RegExp(r'min(?:uutti?)?');
 
   @override
   String second(int amount, [bool abbreviated = true]) {
@@ -67,6 +85,9 @@ class FinnishDurationLocale extends DurationLocale {
   }
 
   @override
+  RegExp get secondPattern => RegExp(r's(?:ekuntia?)?');
+
+  @override
   String millisecond(int amount, [bool abbreviated = true]) {
     if (abbreviated) {
       return 'ms';
@@ -76,6 +97,9 @@ class FinnishDurationLocale extends DurationLocale {
   }
 
   @override
+  RegExp get millisecondPattern => RegExp(r'ms|millisekuntia?');
+
+  @override
   String microseconds(int amount, [bool abbreviated = true]) {
     if (abbreviated) {
       return 'us';
@@ -83,4 +107,7 @@ class FinnishDurationLocale extends DurationLocale {
       return 'mikrosekunti${amount.abs() != 1 ? 'a' : ''}';
     }
   }
+
+  @override
+  RegExp get microsecondPattern => RegExp(r'us|mikrosekuntia?');
 }

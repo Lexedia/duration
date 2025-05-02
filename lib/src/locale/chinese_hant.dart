@@ -4,6 +4,33 @@ class ChineseTraditionalDurationLocale extends DurationLocale {
   const ChineseTraditionalDurationLocale();
 
   @override
+  RegExp get yearPattern => RegExp(r'年');
+  
+  @override
+  RegExp get monthPattern => RegExp(r'月');
+  
+  @override
+  RegExp get weekPattern => RegExp(r'週');
+  
+  @override
+  RegExp get dayPattern => RegExp(r'日');
+  
+  @override
+  RegExp get hourPattern => RegExp(r'小時');
+  
+  @override
+  RegExp get minutePattern => RegExp(r'分鐘');
+  
+  @override
+  RegExp get secondPattern => RegExp(r'秒');
+  
+  @override
+  RegExp get millisecondPattern => RegExp(r'毫秒');
+  
+  @override
+  RegExp get microsecondPattern => RegExp(r'微秒');
+
+  @override
   String get defaultSpacer => '';
 
   @override

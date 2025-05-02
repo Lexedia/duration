@@ -36,6 +36,9 @@ class CzechDurationLocale extends DurationLocale {
   }
 
   @override
+  RegExp get yearPattern => RegExp(r'r|rok|roky|let');
+
+  @override
   String month(int amount, [bool abbreviated = true]) {
     if (abbreviated) {
       return 'měs.';
@@ -50,6 +53,9 @@ class CzechDurationLocale extends DurationLocale {
         return 'měsíců';
     }
   }
+
+  @override
+  RegExp get monthPattern => RegExp(r'měs\.?|měsíc|měsíce|měsíců');
 
   @override
   String week(int amount, [bool abbreviated = true]) {
@@ -68,6 +74,9 @@ class CzechDurationLocale extends DurationLocale {
   }
 
   @override
+  RegExp get weekPattern => RegExp(r't|týden|týdny|týdnů');
+
+  @override
   String day(int amount, [bool abbreviated = true]) {
     if (abbreviated) {
       return 'd';
@@ -82,6 +91,9 @@ class CzechDurationLocale extends DurationLocale {
         return 'dnů';
     }
   }
+
+  @override
+  RegExp get dayPattern => RegExp(r'd|den|dny|dnů');
 
   @override
   String hour(int amount, [bool abbreviated = true]) {
@@ -100,6 +112,9 @@ class CzechDurationLocale extends DurationLocale {
   }
 
   @override
+  RegExp get hourPattern => RegExp(r'h|hodina|hodiny|hodin');
+
+  @override
   String minute(int amount, [bool abbreviated = true]) {
     if (abbreviated) {
       return 'm';
@@ -114,6 +129,9 @@ class CzechDurationLocale extends DurationLocale {
         return 'minut';
     }
   }
+
+  @override
+  RegExp get minutePattern => RegExp(r'm|minuta|minuty|minut');
 
   @override
   String second(int amount, [bool abbreviated = true]) {
@@ -132,6 +150,9 @@ class CzechDurationLocale extends DurationLocale {
   }
 
   @override
+  RegExp get secondPattern => RegExp(r's|sekunda|sekundy|sekund');
+
+  @override
   String millisecond(int amount, [bool abbreviated = true]) {
     if (abbreviated) {
       return 'ms';
@@ -148,6 +169,10 @@ class CzechDurationLocale extends DurationLocale {
   }
 
   @override
+  RegExp get millisecondPattern =>
+      RegExp(r'ms|milisekunda|milisekundy|milisekund');
+
+  @override
   String microseconds(int amount, [bool abbreviated = true]) {
     if (abbreviated) {
       return 'μs';
@@ -162,4 +187,8 @@ class CzechDurationLocale extends DurationLocale {
         return 'mikrosekund';
     }
   }
+
+  @override
+  RegExp get microsecondPattern =>
+      RegExp(r'μs|mikrosekunda|mikrosekundy|mikrosekund');
 }

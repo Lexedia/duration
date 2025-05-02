@@ -13,6 +13,9 @@ class DutchDurationLocale extends DurationLocale {
   }
 
   @override
+  RegExp get yearPattern => RegExp(r'j|jaar|jaren');
+
+  @override
   String month(int amount, [bool abbreviated = true]) {
     if (abbreviated) {
       return 'm';
@@ -20,6 +23,9 @@ class DutchDurationLocale extends DurationLocale {
       return 'maand${amount != 1 ? 'en' : ''}';
     }
   }
+
+  @override
+  RegExp get monthPattern => RegExp(r'm|maand|maanden');
 
   @override
   String week(int amount, [bool abbreviated = true]) {
@@ -31,6 +37,9 @@ class DutchDurationLocale extends DurationLocale {
   }
 
   @override
+  RegExp get weekPattern => RegExp(r'w|week|weken');
+
+  @override
   String day(int amount, [bool abbreviated = true]) {
     if (abbreviated) {
       return 'd';
@@ -38,6 +47,9 @@ class DutchDurationLocale extends DurationLocale {
       return 'dag${amount != 1 ? 'en' : ''}';
     }
   }
+
+  @override
+  RegExp get dayPattern => RegExp(r'd|dag|dagen');
 
   @override
   String hour(int amount, [bool abbreviated = true]) {
@@ -49,6 +61,9 @@ class DutchDurationLocale extends DurationLocale {
   }
 
   @override
+  RegExp get hourPattern => RegExp(r'u|uur|uren');
+
+  @override
   String minute(int amount, [bool abbreviated = true]) {
     if (abbreviated) {
       return 'min';
@@ -56,6 +71,9 @@ class DutchDurationLocale extends DurationLocale {
       return amount == 1 ? 'minuut' : 'minuten';
     }
   }
+
+  @override
+  RegExp get minutePattern => RegExp(r'min|minuut|minuten');
 
   @override
   String second(int amount, [bool abbreviated = true]) {
@@ -67,6 +85,9 @@ class DutchDurationLocale extends DurationLocale {
   }
 
   @override
+  RegExp get secondPattern => RegExp(r's|seconde|seconden');
+
+  @override
   String millisecond(int amount, [bool abbreviated = true]) {
     if (abbreviated) {
       return 'ms';
@@ -76,6 +97,9 @@ class DutchDurationLocale extends DurationLocale {
   }
 
   @override
+  RegExp get millisecondPattern => RegExp(r'ms|milliseconde|milliseconden');
+
+  @override
   String microseconds(int amount, [bool abbreviated = true]) {
     if (abbreviated) {
       return 'us';
@@ -83,4 +107,7 @@ class DutchDurationLocale extends DurationLocale {
       return 'microseconde${amount != 1 ? 'n' : ''}';
     }
   }
+
+  @override
+  RegExp get microsecondPattern => RegExp(r'us|microseconde|microseconden');
 }
