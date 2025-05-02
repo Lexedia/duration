@@ -1,5 +1,9 @@
 # Changelog
 
+## 4.0.4-dev.1
+
+* Add localized parsing, also rename the project.
+
 ## 4.0.3
 
 + Replace `first` with `maxUnits` in `Duration.pretty()`

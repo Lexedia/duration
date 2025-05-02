@@ -1,7 +1,9 @@
 name: hourglass
-description: Utilities to make working with 'Duration's easier. Formats duration in human readable form and also parses duration in human readable form to Dart's Duration.
-version: 4.0.3
+description: A fork of package:duration. Utilities to make working with 'Duration's easier. Formats duration in human readable form and also parses duration in human readable form to Dart's Duration.
+version: 4.0.4-dev.1
 homepage: https://github.com/Lexedia/hourglass
+repository: https://github.com/Lexedia/hourglass.git
+
 
 environment:
   sdk: '>=3.0.0 <4.0.0'
