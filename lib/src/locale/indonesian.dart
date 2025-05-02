@@ -83,40 +83,31 @@ class IndonesianDurationLocale extends DurationLocale {
       return 'mikrodetik${amount > 1 ? 's' : ''}'; //no pluralization
     }
   }
-  
+
   @override
-  // TODO: implement dayPattern
-  RegExp get dayPattern => throw UnimplementedError();
-  
+  RegExp get dayPattern => RegExp(r'hr|hari');
+
   @override
-  // TODO: implement hourPattern
-  RegExp get hourPattern => throw UnimplementedError();
-  
+  RegExp get hourPattern => RegExp(r'j(?:am)?');
+
   @override
-  // TODO: implement microsecondPattern
-  RegExp get microsecondPattern => throw UnimplementedError();
-  
+  RegExp get microsecondPattern => RegExp(r'mikrodetik');
+
   @override
-  // TODO: implement millisecondPattern
-  RegExp get millisecondPattern => throw UnimplementedError();
-  
+  RegExp get millisecondPattern => RegExp(r'milidetik');
+
   @override
-  // TODO: implement minutePattern
-  RegExp get minutePattern => throw UnimplementedError();
-  
+  RegExp get minutePattern => RegExp(r'm(?:enit)?');
+
   @override
-  // TODO: implement monthPattern
-  RegExp get monthPattern => throw UnimplementedError();
-  
+  RegExp get monthPattern => RegExp(r'bln|bulan');
+
   @override
-  // TODO: implement secondPattern
-  RegExp get secondPattern => throw UnimplementedError();
-  
+  RegExp get secondPattern => RegExp(r'd(?:etik)?');
+
   @override
-  // TODO: implement weekPattern
-  RegExp get weekPattern => throw UnimplementedError();
-  
+  RegExp get weekPattern => RegExp(r'mgg|minggu');
+
   @override
-  // TODO: implement yearPattern
-  RegExp get yearPattern => throw UnimplementedError();
+  RegExp get yearPattern => RegExp(r'thn|tahun');
 }

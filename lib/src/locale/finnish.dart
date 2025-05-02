@@ -25,7 +25,7 @@ class FinnishDurationLocale extends DurationLocale {
   }
 
   @override
-  RegExp get monthPattern => RegExp(r'kk(?:uukausia?)?');
+  RegExp get monthPattern => RegExp(r'kk?(?:uukausia?)?');
 
   @override
   String week(int amount, [bool abbreviated = true]) {
@@ -37,7 +37,7 @@ class FinnishDurationLocale extends DurationLocale {
   }
 
   @override
-  RegExp get weekPattern => RegExp(r'vko(?:viikkoa?)?');
+  RegExp get weekPattern => RegExp(r'vko|viikkoa?');
 
   @override
   String day(int amount, [bool abbreviated = true]) {
@@ -49,7 +49,7 @@ class FinnishDurationLocale extends DurationLocale {
   }
 
   @override
-  RegExp get dayPattern => RegExp(r'pvä(?:päivää?)?');
+  RegExp get dayPattern => RegExp(r'pvä|päivää?');
 
   @override
   String hour(int amount, [bool abbreviated = true]) {
@@ -73,7 +73,7 @@ class FinnishDurationLocale extends DurationLocale {
   }
 
   @override
-  RegExp get minutePattern => RegExp(r'min(?:uutti?)?');
+  RegExp get minutePattern => RegExp(r'min(?:uuttia?)?');
 
   @override
   String second(int amount, [bool abbreviated = true]) {

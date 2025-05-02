@@ -13,6 +13,9 @@ class GreekDurationLocale extends DurationLocale {
   }
 
   @override
+  RegExp get yearPattern => RegExp(r'χρόν?ια?|χρόν?ος');
+
+  @override
   String month(int amount, [bool abbreviated = true]) {
     if (abbreviated) {
       return 'μην';
@@ -20,6 +23,9 @@ class GreekDurationLocale extends DurationLocale {
       return 'μήν${amount.abs() != 1 ? 'ες' : 'ας'}';
     }
   }
+
+  @override
+  RegExp get monthPattern => RegExp(r'μήν?ες?|μήν?ας');
 
   @override
   String week(int amount, [bool abbreviated = true]) {
@@ -31,6 +37,9 @@ class GreekDurationLocale extends DurationLocale {
   }
 
   @override
+  RegExp get weekPattern => RegExp(r'ε(?:βδομάδ(?:ες|a))?');
+
+  @override
   String day(int amount, [bool abbreviated = true]) {
     if (abbreviated) {
       return 'μ';
@@ -38,6 +47,10 @@ class GreekDurationLocale extends DurationLocale {
       return 'μέρ${amount.abs() != 1 ? 'ες' : 'α'}';
     }
   }
+
+  // maybe use `η` (`U+03B7`) to match abbr days..
+  @override
+  RegExp get dayPattern => RegExp(r'μέρ(?:ες|α)');
 
   @override
   String hour(int amount, [bool abbreviated = true]) {
@@ -49,6 +62,9 @@ class GreekDurationLocale extends DurationLocale {
   }
 
   @override
+  RegExp get hourPattern => RegExp(r'ω|ώρ(?:ες|α)');
+
+  @override
   String minute(int amount, [bool abbreviated = true]) {
     if (abbreviated) {
       return 'λεπ';
@@ -56,6 +72,9 @@ class GreekDurationLocale extends DurationLocale {
       return 'λεπτ${amount.abs() != 1 ? 'ά' : 'ό'}';
     }
   }
+
+  @override
+  RegExp get minutePattern => RegExp(r'λεπ(?:τ(?:ά|ό))?');
 
   @override
   String second(int amount, [bool abbreviated = true]) {
@@ -67,6 +86,9 @@ class GreekDurationLocale extends DurationLocale {
   }
 
   @override
+  RegExp get secondPattern => RegExp(r'δ(?:ευτερόλεπτ(?:α|o))?');
+
+  @override
   String millisecond(int amount, [bool abbreviated = true]) {
     if (abbreviated) {
       return 'χ';
@@ -76,6 +98,9 @@ class GreekDurationLocale extends DurationLocale {
   }
 
   @override
+  RegExp get millisecondPattern => RegExp(r'χ(?:ιλιοστ(?:ά|ó))?');
+
+  @override
   String microseconds(int amount, [bool abbreviated = true]) {
     if (abbreviated) {
       return 'μ';
@@ -83,40 +108,7 @@ class GreekDurationLocale extends DurationLocale {
       return 'μικροδευτερόλεπτ${amount.abs() != 1 ? 'α' : 'ο'}';
     }
   }
-  
+
   @override
-  // TODO: implement dayPattern
-  RegExp get dayPattern => throw UnimplementedError();
-  
-  @override
-  // TODO: implement hourPattern
-  RegExp get hourPattern => throw UnimplementedError();
-  
-  @override
-  // TODO: implement microsecondPattern
-  RegExp get microsecondPattern => throw UnimplementedError();
-  
-  @override
-  // TODO: implement millisecondPattern
-  RegExp get millisecondPattern => throw UnimplementedError();
-  
-  @override
-  // TODO: implement minutePattern
-  RegExp get minutePattern => throw UnimplementedError();
-  
-  @override
-  // TODO: implement monthPattern
-  RegExp get monthPattern => throw UnimplementedError();
-  
-  @override
-  // TODO: implement secondPattern
-  RegExp get secondPattern => throw UnimplementedError();
-  
-  @override
-  // TODO: implement weekPattern
-  RegExp get weekPattern => throw UnimplementedError();
-  
-  @override
-  // TODO: implement yearPattern
-  RegExp get yearPattern => throw UnimplementedError();
+  RegExp get microsecondPattern => RegExp(r'μ(?:ικροδευτερόλεπτ(?:α|o))?');
 }

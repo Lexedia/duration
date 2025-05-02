@@ -83,40 +83,31 @@ class ItalianDurationLocale extends DurationLocale {
       return 'microsecond${(amount == 0 || amount > 1) ? 'i' : 'o'}';
     }
   }
-  
+
   @override
-  // TODO: implement dayPattern
-  RegExp get dayPattern => throw UnimplementedError();
-  
+  RegExp get dayPattern => RegExp(r'g(?:iorn(?:i|o))?');
+
   @override
-  // TODO: implement hourPattern
-  RegExp get hourPattern => throw UnimplementedError();
-  
+  RegExp get hourPattern => RegExp(r'h(?:or(?:e|a))?');
+
   @override
-  // TODO: implement microsecondPattern
-  RegExp get microsecondPattern => throw UnimplementedError();
-  
+  RegExp get microsecondPattern => RegExp(r'μs|microsecond(?:i|o)');
+
   @override
-  // TODO: implement millisecondPattern
-  RegExp get millisecondPattern => throw UnimplementedError();
-  
+  RegExp get millisecondPattern => RegExp(r'ms|millisecond(?:i|o)');
+
   @override
-  // TODO: implement minutePattern
-  RegExp get minutePattern => throw UnimplementedError();
-  
+  RegExp get minutePattern => RegExp(r'm(?:inut(?:i|o))?');
+
   @override
-  // TODO: implement monthPattern
-  RegExp get monthPattern => throw UnimplementedError();
-  
+  RegExp get monthPattern => RegExp(r'm(?:es(?:i|e))?');
+
   @override
-  // TODO: implement secondPattern
-  RegExp get secondPattern => throw UnimplementedError();
-  
+  RegExp get secondPattern => RegExp(r's(?:econd(?:i|o))?');
+
   @override
-  // TODO: implement weekPattern
-  RegExp get weekPattern => throw UnimplementedError();
-  
+  RegExp get weekPattern => RegExp(r'set(?:timan(?:e|a))?');
+
   @override
-  // TODO: implement yearPattern
-  RegExp get yearPattern => throw UnimplementedError();
+  RegExp get yearPattern => RegExp(r'a(?:nn(?:i|o))?');
 }

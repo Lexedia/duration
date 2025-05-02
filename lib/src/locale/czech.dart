@@ -36,7 +36,7 @@ class CzechDurationLocale extends DurationLocale {
   }
 
   @override
-  RegExp get yearPattern => RegExp(r'r|rok|roky|let');
+  RegExp get yearPattern => RegExp(r'r(?:ocky?)?|let');
 
   @override
   String month(int amount, [bool abbreviated = true]) {
@@ -55,7 +55,7 @@ class CzechDurationLocale extends DurationLocale {
   }
 
   @override
-  RegExp get monthPattern => RegExp(r'měs\.?|měsíc|měsíce|měsíců');
+  RegExp get monthPattern => RegExp(r'měs(?:\.?|íce?|íců)?');
 
   @override
   String week(int amount, [bool abbreviated = true]) {
@@ -74,7 +74,7 @@ class CzechDurationLocale extends DurationLocale {
   }
 
   @override
-  RegExp get weekPattern => RegExp(r't|týden|týdny|týdnů');
+  RegExp get weekPattern => RegExp(r't(?:ýd(?:en|ny|nů)?)?');
 
   @override
   String day(int amount, [bool abbreviated = true]) {
@@ -112,7 +112,7 @@ class CzechDurationLocale extends DurationLocale {
   }
 
   @override
-  RegExp get hourPattern => RegExp(r'h|hodina|hodiny|hodin');
+  RegExp get hourPattern => RegExp(r'h(?:odin(?:a|y)?)?');
 
   @override
   String minute(int amount, [bool abbreviated = true]) {
@@ -131,7 +131,7 @@ class CzechDurationLocale extends DurationLocale {
   }
 
   @override
-  RegExp get minutePattern => RegExp(r'm|minuta|minuty|minut');
+  RegExp get minutePattern => RegExp(r'm(?:inut(?:a|y)?)?');
 
   @override
   String second(int amount, [bool abbreviated = true]) {
@@ -150,7 +150,7 @@ class CzechDurationLocale extends DurationLocale {
   }
 
   @override
-  RegExp get secondPattern => RegExp(r's|sekunda|sekundy|sekund');
+  RegExp get secondPattern => RegExp(r's(?:ekund(?:a|y)?)?');
 
   @override
   String millisecond(int amount, [bool abbreviated = true]) {
@@ -170,7 +170,7 @@ class CzechDurationLocale extends DurationLocale {
 
   @override
   RegExp get millisecondPattern =>
-      RegExp(r'ms|milisekunda|milisekundy|milisekund');
+      RegExp(r'ms|milisekund(?:a|y)?');
 
   @override
   String microseconds(int amount, [bool abbreviated = true]) {
@@ -190,5 +190,5 @@ class CzechDurationLocale extends DurationLocale {
 
   @override
   RegExp get microsecondPattern =>
-      RegExp(r'μs|mikrosekunda|mikrosekundy|mikrosekund');
+      RegExp(r'μs|mikrosekund(?:a|y)?');
 }

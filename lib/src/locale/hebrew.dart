@@ -83,40 +83,31 @@ class HebrewDurationLocale extends DurationLocale {
       return amount == 1 ? 'שנה' : 'שנים';
     }
   }
-  
+
   @override
-  // TODO: implement dayPattern
-  RegExp get dayPattern => throw UnimplementedError();
-  
+  RegExp get dayPattern => RegExp(r'(י|יום|ימים)');
+
   @override
-  // TODO: implement hourPattern
-  RegExp get hourPattern => throw UnimplementedError();
-  
+  RegExp get hourPattern => RegExp(r'(ש|שעה|שעות)');
+
   @override
-  // TODO: implement microsecondPattern
-  RegExp get microsecondPattern => throw UnimplementedError();
-  
+  RegExp get microsecondPattern => RegExp(r'(µs|מיקרו שניה|מיקרו שניות)');
+
   @override
-  // TODO: implement millisecondPattern
-  RegExp get millisecondPattern => throw UnimplementedError();
-  
+  RegExp get millisecondPattern => RegExp(r'(ms|מילי שניה|מילי שניות)');
+
   @override
-  // TODO: implement minutePattern
-  RegExp get minutePattern => throw UnimplementedError();
-  
+  RegExp get minutePattern => RegExp(r'(דק\.|דקה|דקות)');
+
   @override
-  // TODO: implement monthPattern
-  RegExp get monthPattern => throw UnimplementedError();
-  
+  RegExp get monthPattern => RegExp(r'(ח|חודש|חודשיים)');
+
   @override
-  // TODO: implement secondPattern
-  RegExp get secondPattern => throw UnimplementedError();
-  
+  RegExp get secondPattern => RegExp(r'(שנ\.|שניה|שניות)');
+
   @override
-  // TODO: implement weekPattern
-  RegExp get weekPattern => throw UnimplementedError();
-  
+  RegExp get weekPattern => RegExp(r'(שב\.|שבוע|שבועות)');
+
   @override
-  // TODO: implement yearPattern
-  RegExp get yearPattern => throw UnimplementedError();
+  RegExp get yearPattern => RegExp(r'(שנ\.|שנה|שנים)');
 }

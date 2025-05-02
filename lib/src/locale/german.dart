@@ -109,5 +109,5 @@ class GermanDurationLocale extends DurationLocale {
   }
 
   @override
-  RegExp get microsecondPattern => RegExp(r'Us|M(?:ikrosekunde?n?)?');
+  RegExp get microsecondPattern => RegExp(r'Us|M(?:ikrosekunden?)?');
 }
