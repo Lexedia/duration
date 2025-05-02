@@ -1,7 +1,7 @@
 /// Support for doing something awesome.
 ///
 /// More dartdocs go here.
-library duration;
+library hourglass;
 
 export 'src/duration.dart';
 export 'src/milliseconds.dart';

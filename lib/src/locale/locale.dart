@@ -1,6 +1,6 @@
 library duration.locale;
 
-import '../../duration.dart';
+import '../../hourglass.dart';
 
 import 'english.dart';
 import 'french.dart';

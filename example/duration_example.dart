@@ -1,5 +1,5 @@
-import 'package:duration/duration.dart';
-import 'package:duration/locale.dart';
+import 'package:hourglass/hourglass.dart';
+import 'package:hourglass/locale.dart';
 
 void main() {
   // => 5 days 9 hours
