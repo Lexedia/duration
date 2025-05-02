@@ -1,4 +1,4 @@
-# duration [![pub package](https://img.shields.io/pub/v/duration.svg)](https://pub.dartlang.org/packages/duration)
+# hourglass [![pub package](https://img.shields.io/pub/v/hourglass.svg)](https://pub.dev/packages/hourglass)
 
 Utilities to make working with 'Duration's easier.
 
@@ -7,7 +7,7 @@ Utilities to make working with 'Duration's easier.
 Use `Duration.pretty()` method or `prettyDuration` function to format a duration.
 
 ```dart
-main() {
+void main() {
   final dur = Duration(
     days: 5,
     hours: 23,
@@ -24,7 +24,7 @@ main() {
   print((aMillisecond * 3000).pretty());
 
   // => 2 seconds 250 milliseconds
-  print((aMillisecond * 2250).pretty);
+  print((aMillisecond * 2250).pretty());
 
   // => 1 day 3 hours 2 minutes
   print((aMillisecond * 97320000).pretty());
@@ -36,14 +36,15 @@ main() {
 Use `locale` parameter to format with desired locale.
 
 ```dart
-main() {
+void main() {
   // => 5 días 9 horas
   final dur = aDay * 5 + anHour * 9;
   print(
       dur.pretty(
         abbreviated: false,
         locale: DurationLocale.fromLanguageCode('ru'),
-      ));
+      ),
+  );
 }
 ```
 
@@ -52,7 +53,7 @@ main() {
 Use `abbreviated` parameter to use abbreviated units.
 
 ```dart
-main() {
+void main() {
   final dur = Duration(
     days: 5,
     hours: 23,
@@ -72,7 +73,7 @@ main() {
 Use `spacer` to add a string between amount and unit.
 
 ```dart
-main() {
+void main() {
   // => 5 whole days 9 whole hours
   print((aDay * 5 + anHour * 9).pretty(spacer: ' whole '));
 }
@@ -83,7 +84,7 @@ main() {
 Use `delimiter` to separate each individual part with a string.
 
 ```dart
-main() {
+void main() {
   // => 5 days, 9 hours and 10 minute
   print((aDay * 5 + anHour * 9 + aMinute * 10).pretty(delimiter: ', '));
 }
@@ -95,7 +96,7 @@ Use `conjugation` to add a string before the final unit. Use it in conjunction w
 delimiter to add ',' and 'and' to separate individual parts.
 
 ```dart
-main() {
+void main() {
   // => 5 days, 9 hours and 10 minutes
   print(
       (aDay * 5 + anHour * 9 + aMinute * 10).pretty(
@@ -110,16 +111,23 @@ main() {
 ## Parse duration
 
 ```dart
-main() {
-  final Duration dur = parseDuration('245:09:08.007006');
+void main() {
+  final Duration dur = parseDuration('1 week,2h,1s');
   print(dur);
 }
 ```
 
+## Parse localized duration
+```dart
+void main() {
+  final dur = parseDuration('1W,6T,5 Stunde');
+  print(dur) // => Duration(days: 13, hours 5)
+}
+
 ## Parse time
 
 ```dart
-main() {
+void main() {
   final Duration dur = parseTime('245:09:08.007006');
   print(dur);
 }

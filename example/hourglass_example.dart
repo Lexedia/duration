@@ -8,12 +8,13 @@ void main() {
   // More examples
 
   final dur = Duration(
-      days: 5,
-      hours: 23,
-      minutes: 59,
-      seconds: 59,
-      milliseconds: 999,
-      microseconds: 999);
+    days: 5,
+    hours: 23,
+    minutes: 59,
+    seconds: 59,
+    milliseconds: 999,
+    microseconds: 999,
+  );
 
   // => 5 days 23 hours 59 minutes 59 seconds
   print(dur.pretty());
@@ -46,4 +47,7 @@ void main() {
   // => 5 days, 9 hours and 10 minutes
   print((aDay * 5 + anHour * 9 + aMinute * 10)
       .pretty(delimiter: ', ', conjunction: ' and '));
+
+  // => true
+  print(parseDuration('1 week, 2 days, 7 hours', separator: ', ') == Duration(days: 9, hours: 7));
 }
