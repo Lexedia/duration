@@ -120,9 +120,10 @@ void main() {
 ## Parse localized duration
 ```dart
 void main() {
-  final dur = parseDuration('1W,6T,5 Stunde');
-  print(dur) // => Duration(days: 13, hours 5)
+  final dur = parseDuration('1W,6T,5 Stunde', language: germanLocale);
+  print(dur) // => Duration(days: 13, hours: 5)
 }
+```
 
 ## Parse time
 
