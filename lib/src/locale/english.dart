@@ -25,7 +25,7 @@ class EnglishDurationLocale extends DurationLocale {
   }
 
   @override
-  RegExp get monthPattern => RegExp(r'mon(?:ths?)?');
+  RegExp get monthPattern => RegExp(r'M|mon(?:ths?)?');
 
   @override
   String week(int amount, [bool abbreviated = true]) {
