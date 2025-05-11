@@ -1,5 +1,9 @@
 # Changelog
 
+## 4.0.4-dev.2
+
+* Use `M` for a short parsing form for the English language.
+
 ## 4.0.4-dev.1
 
 * Add localized parsing, also rename the project.
